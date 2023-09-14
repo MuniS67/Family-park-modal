@@ -1,0 +1,214 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+}
+body {
+  background-color: whitesmoke;
+}
+.active {
+  display: block !important;
+}
+.active_none {
+  display: none !important;
+}
+
+.container {
+  max-width: 1240px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  position: relative;
+  max-height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+  padding: 30px 20px;
+  background-color: whitesmoke;
+}
+
+.header_left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  transition: 0.5s ease;
+}
+.language {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+.language p {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(37, 37, 76);
+  cursor: pointer;
+}
+.language p:nth-child(2) {
+  color: lightseagreen;
+}
+.header_left img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.logo img {
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  object-fit: contain;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+.header_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.socials img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  object-fit: contain;
+}
+.burger_open {
+  display: block;
+  width: 39px;
+  height: 13px;
+  cursor: pointer !important;
+  object-fit: contain;
+}
+.burger_close {
+  width: 33px;
+  height: 33px;
+  cursor: pointer !important;
+  object-fit: contain;
+  display: none;
+}
+
+.logo_open {
+  animation: logo_open 1s;
+}
+
+@keyframes logo_open {
+  from {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+  }
+  to {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    translate: -50% -60%;
+  }
+}
+
+.mw_bg {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+.modal_window {
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  gap: 100px;
+  padding: 50px 20px;
+  transition: all 2s ease;
+}
+.mw_anim_open {
+  animation: mw_anim 1s;
+}
+@keyframes mw_anim {
+  from {
+    opacity: 0.1;
+    scale: 0.1;
+    rotate: 360deg;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+    rotate: 0deg;
+  }
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.inf {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+.inf a {
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(37, 37, 76);
+  transition: 0.2s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+.inf a:hover {
+  color: rgb(200, 48, 83);
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+}
+.loc nav ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+.loc nav ul li {
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(37, 37, 76);
+  translate: -20px 0px;
+  transition: 0.4s ease;
+  cursor: pointer;
+  list-style-type: none;
+}
+.loc nav ul li:hover {
+  color: rgb(200, 48, 83);
+}
+.loc nav ul li:nth-child(9),
+.loc nav ul li:nth-child(10) {
+  color: rgb(200, 48, 83);
+}
